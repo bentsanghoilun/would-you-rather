@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Would You Rather",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
