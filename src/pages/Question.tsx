@@ -12,6 +12,8 @@ import {
 	IonCardTitle,
 	IonLoading,
     IonChip,
+	IonCardSubtitle,
+	IonContent,
 } from "@ionic/react";
 import { useState } from "react";
 import { useParams } from "react-router";
@@ -126,7 +128,7 @@ const Question: React.FC = () => {
 		<IonPage>
 			<Header />
 			<Container>
-				{question && (
+				{question ? (
 					<>
 						<div
 							style={{
@@ -149,7 +151,20 @@ const Question: React.FC = () => {
 							<QuestionStats question={question} />
 						)}
 					</>
-				)}
+				)
+					:
+					(
+						<IonCard>
+							<IonCardHeader>
+								<IonCardTitle>I Don't think this is the right Question...</IonCardTitle>
+								<IonCardSubtitle>404 error</IonCardSubtitle>
+							</IonCardHeader>
+							<IonCardContent style={{padding: '2rem'}}>
+								<IonLabel><b>There don't seems to be any question with this id ({id}) in our records.</b></IonLabel>
+							</IonCardContent>
+						</IonCard>
+					)
+			}
 			</Container>
 		</IonPage>
 	);

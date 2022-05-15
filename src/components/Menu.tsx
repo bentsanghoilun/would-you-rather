@@ -114,7 +114,7 @@ const Menu: React.FC = () => {
 							<b>Home</b>
 						</IonLabel>
 					</IonItem>
-					<IonItem button lines="none" onClick={() => history.push(`/ask`)}>
+					<IonItem button lines="none" onClick={() => history.push(`/add`)}>
 						<IonIcon icon={helpCircleOutline} slot="start" />
 						<IonLabel color="dark">
 							<b>Ask Question</b>

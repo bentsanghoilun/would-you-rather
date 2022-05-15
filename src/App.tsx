@@ -3,20 +3,11 @@ import { initFirebase } from "./app/firebase";
 import { Redirect, Route } from "react-router-dom";
 import {
 	IonApp,
-	IonIcon,
-	IonLabel,
 	IonRouterOutlet,
 	IonSplitPane,
-	IonTabBar,
-	IonTabButton,
-	IonTabs,
 	setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { ellipse, square, triangle } from "ionicons/icons";
-import Tab1 from "./pages/Tab1";
-import Tab2 from "./pages/Tab2";
-import Tab3 from "./pages/Tab3";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -69,7 +60,7 @@ const App: React.FC = () => {
 						<Menu />
 						<IonRouterOutlet id="main">
 							<Route path={`/`} exact><Home /></Route>
-								<Route path={`/ask`} exact><Ask /></Route>
+								<Route path={`/add`} exact><Ask /></Route>
 								<Route path={`/leaderboard`} exact><Leaderboard /></Route>
 							<Route path={`/questions/:id`}><Question/></Route>
 							<Redirect to={`/`} />
